@@ -1,0 +1,171 @@
+body
+{
+	padding: 0px;
+	margin:0;
+}
+a
+{
+	text-decoration: none;
+	color:black;
+}
+a:hover
+{
+	text-decoration: underline;
+}
+a:visited
+{
+	color: currentColor;
+}
+.background
+{
+	position: fixed;
+	top:0;
+	left:0;
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	z-index: -1;
+	overflow:hidden;
+}
+.background video
+{
+	min-width:100%;
+	min-height:100%;
+	width:auto;
+	height:auto;
+	position: absolute;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%,-50%);
+}
+.wrapper
+{
+	width:100%;
+	height: 100%;
+	margin:auto;
+	padding: 2px;
+	background-color: rgba(255,255,255,0.7);
+	box-sizing: border-box;
+}
+.container
+{
+	width:80%;
+	margin:auto;
+}
+.logo
+{
+	width: 450px;
+	height:450px;
+	float:left;
+	background-image: url("../images/logo_transparent.png");
+	background-repeat: no-repeat;
+	background-size: 450px auto;
+	background-position: center;
+	cursor: pointer;
+}
+.box
+{
+	background-color: white;
+	float:right;
+	width: 450px;
+	border: 1px #0c539a dashed;
+	padding:25px;
+	padding-bottom: 20px;
+	box-sizing: border-box;
+}
+.box h1
+{
+	color: #0c539a;
+	text-align:center;
+}
+.myform
+{
+	padding-bottom:15px;
+}
+.myform label
+{
+	display:block;
+}
+.myform input[type="text"], input[type="password"]
+{
+	padding:10px;
+	width:100%;
+}
+.myform input[type="submit"]
+{
+	
+	
+	background-color: #0c539a;
+	color:  white;
+	font-weight: bold;
+	padding: 10px 25px;
+}
+.myform input[type="submit"]:hover
+{
+	
+	
+	color: #0c539a;
+	background-color:  white;
+}
+.myform p
+{
+	margin:0;
+}
+.extraPadding
+{
+	padding: 28px 0;
+}
+.extraPadding2
+{
+	padding: 5px 0px 0px 10px;
+}
+.extraPadding3
+{
+	padding: 64.5px 0;
+}
+.extraPadding4
+	{
+		padding: 46.5px;
+	}
+@media(min-width: 800)
+{
+	.logo
+	{
+		float:middle;
+	}
+}
+@media(max-width:1200px)
+{
+	.container
+	{
+		width:100%;
+	}
+	.logo
+	{
+		width:100%;
+		height:200px;
+		float:none;
+		margin:auto;
+	}
+	.box
+	{
+		
+		width:450px;
+		float:none;
+		margin:auto;
+
+	}
+	.extraPadding
+	{
+		padding: 0;
+	}
+	.extraPadding3
+	{
+		padding: 0;
+	}
+	.extraPadding4
+	{
+		padding: 0;
+	}
+}

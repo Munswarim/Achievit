@@ -1,0 +1,112 @@
+<!DOCTYPE=html>
+<head>
+	<title>Edit URL</title>
+	<link rel="stylesheet" type="text/css" 
+	href = "../css/basics.css">
+</head>
+<body>	
+		<div class="background">
+			<video autoplay loop muted>
+				<source src="../images/RainOnGlass1080p.webm" type="video/webm">
+			</video>
+		</div>
+		
+		<div class="box-2"></div>
+		
+		<div class="box-1">
+			<button class="button-1" onclick="window.location.href = 'index.html';">Home</button>
+			<button class="button-1" onclick="window.location.href = 'courses.html';">Courses</button>
+			<button class="button-1" onclick="window.location.href = 'url.html';">My URLs</button>
+			<button class="button-1" onclick="window.location.href = '../Guest/404.html';">Forum</button>
+			<div class="blockbreak"></div>
+			<div class="searchbar">
+				<form>
+					<input type="text" name="Search">
+					<input type="submit" value="Search" name="search">
+				</form>
+			</div>
+			<button class="button-1" onclick="window.location.href = 'Profile.html';">Profile</button>
+			<button class="button-1" onclick="window.location.href = '../Guest/sign_in.html';">Sign out</button>
+		</div>			
+		<div class="clr"></div>
+
+		<div style="height:50px"><!--justAddingSomeSpace--></div>
+		
+		
+		<div class="container">
+			<form autocomplete="off">
+				<div class="myform">
+					<label>Embedded URL:</label>
+					<input type="text" name="Embedded URL">
+				</div>
+				<div class="myform">
+					<label>URL name/title:</label>
+					<input type="text" name="URL name/title">
+				</div>
+				<div class="myform">
+					<label>Publicity: <b style="font-weight: normal;">
+						<input type="radio" name="Publicity" value="Public" title="Visible to everyone">Public
+						<input type="radio" name="Publicity" value="Private" checked title="Visible to user / selective community">Private</label></b>
+					</label>
+				</div>
+
+				<div class="myform">
+					<label>Include in a course: <b style="font-weight: normal;">
+						<input type="radio" name="Include in a course:" value="Yes" onclick="Check()" id="inclusion">Yes
+						<input type="radio" name="Include in a course:" value="No" onclick="Check()" id="exclusion" checked>No</b>
+					</label>
+				</div>
+				<div class="myform" id="displayer" style="display: none;">
+					<label title="Hold 'Ctrl' to select/deselect multiple options">Select Course(s):</label>
+					<select  multiple name="Course" id="selection" style="overflow: hidden;" value="">
+						<option value ="Course title-1">Course title-1</option>
+						<option value ="Course title-2">Course title-2</option>
+						<option value ="Course title-3">Course title-3</option>
+						<option value ="Course title-4">Course title-4</option>
+						<option value ="Course title-5">Course title-5</option>
+					</select> 
+				</div>
+				<div class="myform">
+					<label>Keywords:</label>
+					<input type="text" name="Keywords">
+				</div>
+				
+				<div class="myform">
+					<p align="center">
+					<input onclick="window.location.href = '#';"
+					type="submit" value="Save changes" name="Save changes">
+					</p>
+				</div>
+			</form>
+		</div>
+
+		<div style="height:50px"><!--justAddingSomeSpace--></div>
+
+		<footer><div class="footer">
+			think positively  |  network well  |  exercise daily  |  eat healthy  |  work hard  |  study smart  |  stay strong  |  build faith  |  cherish dreams  |  worry less  |  read more  |  be happy  |  volunteer freely  |  relax often  |  make plans  |  enjoy leisure  |  live comfortably  |  stop procrastinating  |  challenge yourself  |  don't ever quit
+
+		</div></footer>
+		
+		<script>
+				function Check()
+				{
+					var inclusion = document.getElementById("inclusion");
+					var exclusion = document.getElementById("exclusion");
+					var displayer = document.getElementById("displayer");
+					var selection = document.getElementById("selection");
+					if (inclusion.checked == true)
+					{
+						displayer.style.display = "block";
+					}
+					else if(exclusion.checked == true)
+					{
+						displayer.style.display = "none";
+						selection.value="";
+					}
+				}
+
+				var select=document.getElementById("selection");
+				select.size = select.length;
+		</script>
+</body>
+</html>

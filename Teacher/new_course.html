@@ -1,0 +1,94 @@
+<!DOCTYPE=html>
+<head>
+	<title>New Course</title>
+	<link rel="stylesheet" type="text/css" 
+	href = "../css/basics.css">
+</head>
+<body>	
+		<div class="background">
+			<video autoplay loop muted>
+				<source src="../images/RainOnGlass1080p.webm" type="video/webm">
+			</video>
+		</div>
+		
+		<div class="box-2"></div>
+		
+		<div class="box-1">
+			<button class="button-1" onclick="window.location.href = 'index.html';">Home</button>
+			<button class="button-1" onclick="window.location.href = 'courses.html';">Courses</button>
+			<button class="button-1" onclick="window.location.href = 'url.html';">My URLs</button>
+			<button class="button-1" onclick="window.location.href = '../Guest/404.html';">Forum</button>
+			<div class="blockbreak"></div>
+			<div class="searchbar">
+				<form>
+					<input type="text" name="Search">
+					<input type="submit" value="Search" name="search">
+				</form>
+			</div>
+			<button class="button-1" onclick="window.location.href = 'Profile.html';">Profile</button>
+			<button class="button-1" onclick="window.location.href = '../Guest/sign_in.html';">Sign out</button>
+		</div>			
+		<div class="clr"></div>
+
+		<div style="height:50px"><!--justAddingSomeSpace--></div>
+		
+		
+		<div class="container">
+			<form autocomplete="off">
+				<div class="myform">
+					<label>Course title:</label>
+					<input type="text" name="Course title">
+				</div>
+				<div class="myform">
+					<label>Course code:
+					<input type="text" name="Course code" style="width: 115px; text-align:center;">
+					<span style="padding-left: 20px"></span>
+					Credit hr: 
+					<select name="Credit hr" style="text-align:center">
+						<option value ="none" disabled selected="">-----</option>
+						<option value ="0.75">0.75</option>
+						<option value ="1.50">1.50</option>
+						<option value ="2.00">2.00</option>
+						<option value ="3.00">3.00</option>
+						<option value ="4.00">4.00</option>
+					</select> 
+					</label>
+				</div>
+
+				<div class="myform">
+					<label>Joining code:
+					<input type="text" name="Joining code" id="code" style="width: 115px; text-align: center;">
+					<span style="padding-left:10px;"></span>
+					<button type="button" style="padding: 2px 5px;" onclick="generatePassword()">KeyGen</button></label>
+				</div>
+				
+				<div class="myform">
+					<p align="center">
+					<input onclick="window.location.href = '#';"
+					type="submit" value="Create course" name="Upload URL">
+					</p>
+				</div>
+			</form>
+		</div>
+
+		<div style="height:50px"><!--justAddingSomeSpace--></div>
+
+		<footer><div class="footer">
+			think positively  |  network well  |  exercise daily  |  eat healthy  |  work hard  |  study smart  |  stay strong  |  build faith  |  cherish dreams  |  worry less  |  read more  |  be happy  |  volunteer freely  |  relax often  |  make plans  |  enjoy leisure  |  live comfortably  |  stop procrastinating  |  challenge yourself  |  don't ever quit
+
+		</div></footer>
+		<script>
+		function generatePassword()
+		{
+			var length = 10;
+        	charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#$%^&*",
+    		password = "";
+    		for (var i = 0, n = charset.length; i < length; ++i)
+    		{
+        		password += charset.charAt(Math.floor(Math.random() * n));
+    		}
+    		document.getElementById("code").defaultValue =  password;
+		}
+		</script>
+</body>
+</html>

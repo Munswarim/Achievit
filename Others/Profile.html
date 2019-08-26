@@ -1,0 +1,97 @@
+<!DOCTYPE=html>
+<head>
+	<title>User Profile</title>
+	<link rel="stylesheet" type="text/css" 
+	href = "../css/basics.css">
+</head>
+<body>	
+		<div class="background">
+			<video autoplay loop muted>
+				<source src="../images/RainOnGlass1080p.webm" type="video/webm">
+			</video>
+		</div>
+		
+		<div class="box-2"></div>
+		
+		<div class="box-1">
+			<button class="button-1" onclick="window.location.href = 'index.html';">Home</button>
+			<button class="button-1" onclick="window.location.href = '#';" disabled title="Unavailable" style="cursor: not-allowed;">Courses</button>
+			<button class="button-1" onclick="window.location.href = 'url.html';">My URLs</button>
+			<button class="button-1" onclick="window.location.href = '../Guest/404.html';">Forum</button>
+			<div class="blockbreak"></div>
+			<div class="searchbar">
+				<form>
+					<input type="text" name="Search">
+					<input type="submit" value="Search" name="search">
+				</form>
+			</div>
+			<button class="button-1" onclick="window.location.href = 'Profile.html';">Profile</button>
+			<button class="button-1" onclick="window.location.href = '../Guest/sign_in.html';">Sign out</button>
+		</div>			
+		<div class="clr"></div>
+
+		<div style="height:50px"><!--justAddingSomeSpace--></div>
+		
+		
+		<div class="container">
+			<form autocomplete="off">
+				<fieldset disabled id="unlocked">
+					<div class="myform" id="profile">
+						<label>User name:</label>
+						<input type="text" name="User name">
+					</div>
+					<div class="myform" id="profile">
+						<label title="If you don't have one, type 0 (zero)">User ID:</label>
+						<input type="text" name="ID">
+					</div>
+					<div class="myform" id="profile">
+						<label>E-mail:</label>
+						<input type="text" name="E-mail">
+					</div>
+					<div class="myform" id="profile">
+						<label disabled>User type: <b style="font-weight: normal;">
+							<input type="radio" name="User type" value="Teacher" disabled>Teacher
+							<input type="radio" name="User type" value="Student" disabled>Student
+							<input type="radio" name="User type" value="Other" checked disabled>Other</b>
+						</label>
+					</div>
+					<div class="myform" id="profile">
+						<label>Password:</label>
+						<input type="password" name="Password" disabled>
+						<span style="padding-left:5px;"></span>
+						<button type="button" style="padding: 2px 5px; opacity: 0.4" onclick="window.location.href = 
+						'../Guest/change_password.html';" id="update">Update</button>
+					</div>
+					<div id="confirm" style="display: none;"> <div class="myform" id="profile">
+						<label>Retype password:</label>
+						<input type="password" name="Retype password">
+					</div> </div>
+				</fieldset>
+				<div class="myform" align="center">
+					<button type="button" onclick="Unlock()" id="edit-profile">Edit</button>
+					<input onclick="window.location.href = 'profile.html';" type="submit" 
+					value="Save" name="Save" style="display: none;" id="save-profile">
+				</div>
+			</form>
+		</div>
+
+		<div style="height:50px"><!--justAddingSomeSpace--></div>
+
+		<footer><div class="footer">
+			think positively  |  network well  |  exercise daily  |  eat healthy  |  work hard  |  study smart  |  stay strong  |  build faith  |  cherish dreams  |  worry less  |  read more  |  be happy  |  volunteer freely  |  relax often  |  make plans  |  enjoy leisure  |  live comfortably  |  stop procrastinating  |  challenge yourself  |  don't ever quit
+
+		</div></footer>
+		
+		<script>
+			function Unlock()
+			{
+				document.getElementById("edit-profile").style.display="none";
+				document.getElementById("save-profile").style.display="block";
+				document.getElementById("unlocked").disabled=false;
+				document.getElementById("update").style.opacity="1";
+				document.getElementById("confirm").style.display="block";
+			}
+
+		</script>
+</body>
+</html>
