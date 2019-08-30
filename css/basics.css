@@ -93,7 +93,7 @@ button:hover
 
 .searchbar input[type="text"]
 {
-	padding:6px 15px;
+	padding:6px 5px;
 	width:75%;
 	float:left;
 	position:relative;
