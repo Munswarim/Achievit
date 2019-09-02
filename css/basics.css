@@ -314,7 +314,7 @@ th
 	font-weight: bold;
 	padding: 10px 25px;
 }
-.myform input[type="submit"]:hover
+.myform input[type="submit"]:hover, .myform button:hover
 {
 	
 	
