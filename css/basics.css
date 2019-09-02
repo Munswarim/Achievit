@@ -10,6 +10,7 @@ body
 {
 	position: fixed;
 	background-image: url("../images/rain.jpg");
+	background-repeat: no-repeat;
 	top:0;
 	left:0;
 	margin:0;
