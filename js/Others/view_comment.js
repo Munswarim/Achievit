@@ -7,8 +7,19 @@ const init = function(e){
 	let date_arr = JSON.parse(localStorage.getItem('date'));
 	let container = document.querySelector('.container');
 	container.className='container myform';
+
 	var textarea=[]
 	var div=[];
+	
+	if(comment_arr==null)
+	{
+		div = document.createElement('div');
+		div.style.height='200px';
+		div.innerHTML='<br><br><p align="center"><i>Nothing to show</i><p>';
+		container.appendChild(div);
+		return;
+	}
+
 	for(var i=0; i<comment_arr.length; i++)
 	{
 		textarea[i] = document.createElement('textarea');
@@ -23,7 +34,6 @@ const init = function(e){
 		div[i].style.height='50px';
 		container.appendChild(div[i]);
 	}
-
 };
 document.addEventListener('DOMContentLoaded', function(){
 	console.log('DOM content loaded');

@@ -3,7 +3,7 @@
 const init = function(e){
 	let btn = document.querySelector("#btn");
 	btn.addEventListener('click', function(event){
-		//event.preventDefault();
+		event.preventDefault();
 		let comment = document.getElementById("comment").value;
 		let email = document.getElementById("email");
 		let date = new Date();
@@ -12,9 +12,12 @@ const init = function(e){
 		else
 			email = email.value;
 		if(email == '' || comment == '')
+		{	
+			window.document.location = './index.html';
 			return;
-		//console.log(email);
-		//console.log(comment);
+		}			
+		console.log(email);
+		console.log(comment);
 		let comment_arr;
 		let email_arr;
 		let date_arr;
@@ -43,8 +46,8 @@ const init = function(e){
 			localStorage.setItem('comment', JSON.stringify(comment_arr));
 			localStorage.setItem('email', JSON.stringify(email_arr));
 			localStorage.setItem('date', JSON.stringify(date_arr));
+			window.document.location = './index.html';
 		}
-		//window.document.location = '../Teacher/courses.html';
 	});
 };
 document.addEventListener('DOMContentLoaded', function(){
