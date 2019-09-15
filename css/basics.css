@@ -154,7 +154,7 @@ button:hover
 .sidebar
 {
 	width:calc(100% - 170px);
-	max-height: 150px;
+	max-height: 200px;
 	text-align: justify;
 	padding-top:5%;
 	padding-left: 10px; 
@@ -163,9 +163,10 @@ button:hover
 .icon
 {
 	width:145px;
-	height:145px;
+	height:160px;
 	background-repeat: no-repeat;
 	background-size: 145px 145px;
+	background-position: center;
 }
 .footer
 {
@@ -357,4 +358,16 @@ fieldset
 	font-family: "Blackjack";
 	font-size: 20px;
 	padding: 10.3px 0 4px 0;
+}
+#email
+{
+	width:50%;
+	min-width: 300px;
+	padding: 5px 15px;
+}
+#comment
+{
+	width:100%;
+	padding: 5px 15px;
+	text-align: justify;
 }

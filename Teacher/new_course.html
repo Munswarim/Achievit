@@ -38,14 +38,14 @@
 			<form autocomplete="off">
 				<div class="myform">
 					<label>Course title:</label>
-					<input type="text" name="Course title">
+					<input type="text" name="Course title" id="Course title">
 				</div>
 				<div class="myform">
 					<label>Course code:
-					<input type="text" name="Course code" style="width: 115px; text-align:center;">
+					<input type="text" name="Course code" id="Course code" style="width: 115px; text-align:center;">
 					<span style="padding-left: 20px"></span>
 					Credit hr: 
-					<select name="Credit hr" style="text-align:center">
+					<select name="Credit hr" id="Credit hr" style="text-align:center">
 						<option value ="none" disabled selected="">-----</option>
 						<option value ="0.75">0.75</option>
 						<option value ="1.50">1.50</option>
@@ -58,15 +58,14 @@
 
 				<div class="myform">
 					<label>Joining code:
-					<input type="text" name="Joining code" id="code" style="width: 115px; text-align: center;">
+					<input type="text" name="Joining code" id="Joining code" style="width: 115px; text-align: center;">
 					<span style="padding-left:10px;"></span>
 					<button type="button" style="padding: 2px 5px;" onclick="generatePassword()">KeyGen</button></label>
 				</div>
 				
 				<div class="myform">
 					<p align="center">
-					<input onclick="window.location.href = '#';"
-					type="submit" value="Create course" name="Upload URL">
+					<input id="btn" type="submit" value="Create course" name="Upload URL">
 					</p>
 				</div>
 			</form>
@@ -88,8 +87,9 @@
     		{
         		password += charset.charAt(Math.floor(Math.random() * n));
     		}
-    		document.getElementById("code").value =  password;
+    		document.getElementById("Joining code").value =  password;
 		}
 		</script>
+		<script src="../js/Teacher/new_course.js"></script>
 </body>
 </html>
