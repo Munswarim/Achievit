@@ -3,7 +3,7 @@
 const init = function(e){
 	let btn = document.querySelector("#btn");
 	btn.addEventListener('click', function(event){
-		event.preventDefault();
+		//event.preventDefault();
 		let comment = document.getElementById("comment").value;
 		let email = document.getElementById("email");
 		let date = new Date();
