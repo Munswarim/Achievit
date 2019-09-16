@@ -16,7 +16,7 @@ body
 	overflow:hidden;
 	opacity: 0.5;
 }
-.errorMessage picture, .errorMessage img
+.errorMessage img
 {
 	min-width:100%;
 	min-height:100%;
