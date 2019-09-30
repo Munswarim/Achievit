@@ -27,7 +27,7 @@
 				</form>
 			</div>
 			<button class="button-1" onclick="window.location.href = 'Profile.html';">Profile</button>
-			<button class="button-1" onclick="window.location.href = '../Guest/sign_in.html';">Sign out</button>
+			<button class="button-1" id="sign-out">Sign out</button>
 		</div>			
 		<div class="clr"></div>
 
@@ -35,19 +35,19 @@
 		
 		
 		<div class="container">
-			<form autocomplete="off">
+			<form autocomplete="off" id="user-info">
 				<fieldset disabled id="unlocked">
 					<div class="myform" id="profile">
 						<label>User name:</label>
-						<input type="text" name="User name">
+						<input type="text" name="User name" id="userName">
 					</div>
 					<div class="myform" id="profile">
 						<label title="If you don't have one, type 0 (zero)">User ID:</label>
-						<input type="text" name="ID">
+						<input type="text" name="ID" id="userID">
 					</div>
 					<div class="myform" id="profile">
 						<label>E-mail:</label>
-						<input type="text" name="E-mail">
+						<input type="text" name="E-mail" id="email">
 					</div>
 					<div class="myform" id="profile">
 						<label disabled>User type: <b style="font-weight: normal;">
@@ -84,7 +84,10 @@
 			think positively  |  network well  |  exercise daily  |  eat healthy  |  work hard  |  study smart  |  stay strong  |  build faith  |  cherish dreams  |  worry less  |  read more  |  be happy  |  volunteer freely  |  relax often  |  make plans  |  enjoy leisure  |  live comfortably  |  stop procrastinating  |  challenge yourself  |  don't ever quit
 
 		</div></footer>
-		
+		<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase.js"></script>
+		<script src="../js/Others/firebase-config.js"></script>
+		<script src="../js/Others/auth.js"></script>
+		<script src="../js/Others/sign-out.js"></script>
 		<script>
 			function Unlock()
 			{
@@ -96,5 +99,6 @@
 			}
 
 		</script>
+		<script src="../js/Others/load-profile.js"></script>
 </body>
 </html>

@@ -19,18 +19,18 @@
 		<div class="box">
 			<div class="extraPadding"></div>
 			<h1>Sign in</h1>
-			<form>
+			<form id="sign-in">
 				<div class="myform">
 					<label>User ID:</label>
-					<input type="text" name="ID">
+					<input type="text" name="ID" id="User-ID">
 				</div>
 				<div class="myform">
 					<label>E-mail:</label>
-					<input type="text" name="E-mail">
+					<input type="text" name="E-mail" id="E-mail">
 				</div>
 				<div class="myform">
 					<label>Password:</label>
-					<input type="password" name="Password">
+					<input type="password" name="Password" id="Password">
 				</div>
 				<div class="myform">
 					<p align="center"><input type="checkbox" name="Remember me" value="true">Stay signed in<br><br>
@@ -43,5 +43,10 @@
 			</form>
 		</div>
 	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase.js"></script>
+	<script src="../js/Others/firebase-config.js"></script>
+	<script src="../js/Others/auth.js"></script>
+	<script src="../js/Others/sign-in.js"></script>
 </body>
 </html>

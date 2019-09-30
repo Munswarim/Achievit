@@ -27,7 +27,7 @@
 				</form>
 			</div>
 			<button class="button-1" onclick="window.location.href = 'Profile.html';">Profile</button>
-			<button class="button-1" onclick="window.location.href = '../Guest/sign_in.html';">Sign out</button>
+			<button class="button-1" id="sign-out">Sign out</button>
 		</div>			
 		<div class="clr"></div>
 
@@ -109,5 +109,8 @@
 				var select=document.getElementById("selection");
 				select.size = select.length;
 		</script>
+		<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase.js"></script>
+		<script src="../js/Others/firebase-config.js"></script>
+		<script src="../js/Others/sign-out.js"></script>
 </body>
 </html>

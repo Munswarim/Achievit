@@ -6,9 +6,9 @@ const init = function(e){
 		event.preventDefault();
 		let comment = document.getElementById("comment").value;
 		let email = document.getElementById("email");
-		let date = new Date();
+		let date = String(new Date());
 		if(email == undefined)
-			email = 'example@domain';
+			email = localStorage.getItem('EMAIL');
 		else
 			email = email.value;
 		if(email == '' || comment == '')

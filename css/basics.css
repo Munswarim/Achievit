@@ -6,6 +6,12 @@ body
 {
 	margin:0;
 }
+h1
+{
+	color: #0c539a;
+	text-align:center;
+	margin:  20px 0 0 0;
+}
 .background
 {
 	position: fixed;
@@ -344,7 +350,7 @@ fieldset
 	background-color: none;
 }
 
-#profile input[type="text"], input[type="password"]
+.profile input[type="text"], input[type="password"]
 {
 	width:80%;
 }

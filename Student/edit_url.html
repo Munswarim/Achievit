@@ -27,7 +27,7 @@
 				</form>
 			</div>
 			<button class="button-1" onclick="window.location.href = 'Profile.html';">Profile</button>
-			<button class="button-1" onclick="window.location.href = '../Guest/sign_in.html';">Sign out</button>
+			<button class="button-1" id="sign-out">Sign out</button>
 		</div>			
 		<div class="clr"></div>
 
@@ -87,7 +87,8 @@
 			think positively  |  network well  |  exercise daily  |  eat healthy  |  work hard  |  study smart  |  stay strong  |  build faith  |  cherish dreams  |  worry less  |  read more  |  be happy  |  volunteer freely  |  relax often  |  make plans  |  enjoy leisure  |  live comfortably  |  stop procrastinating  |  challenge yourself  |  don't ever quit
 
 		</div></footer>
-		
+		<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase.js"></script>
+		<script src="../js/Others/firebase-config.js"></script>
 		<script>
 				function Check()
 				{
@@ -109,5 +110,6 @@
 				var select=document.getElementById("selection");
 				select.size = select.length;
 		</script>
+		<script src="../js/Others/sign-out.js"></script>
 </body>
 </html>
