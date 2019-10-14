@@ -43,11 +43,17 @@ signIn.addEventListener('submit', (e) => {
 				localStorage.setItem('EMAIL', eMail);
 				localStorage.setItem('USERID', userID);
 				localStorage.setItem('USERNAME', userName);
+				localStorage.setItem('USERTYPE', type);
 			}	
 		})//.then(() => {
+		if(userID==undefined)
+		{
+			alert("Your email address appears to be incorrect. In fact, this email is not in use.");
+			return;
+		}	
 		if(userID!=userId)
 		{
-			alert("Your user ID appears to be incorrect.");
+			alert("Your user ID appears to be incorrect. Please try again.");
 			return;
 		}
 		auth.signInWithEmailAndPassword(eMail, password).then( cred => { 
@@ -63,7 +69,8 @@ signIn.addEventListener('submit', (e) => {
 			else if(type=='Other')
 				window.location.href='../Others/index.html';
 		}).catch(err => {
-			alert("Your email address / password appears to be incorrect.");
+			alert("Your password appears to be incorrect. Please try again.");
+			signIn['Password'].value='';
 		})
 			
 		//})

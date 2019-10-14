@@ -55,7 +55,7 @@ a:visited
 {
 	width:80%;
 	margin:auto;
-	padding: 2px;
+	padding: calc(calc(100vh - 660px)/2) 2px 0 2px;
 }
 .logo
 {
@@ -111,6 +111,7 @@ a:visited
 	
 	color: #0c539a;
 	background-color:  white;
+	border-color: #0c539a;
 }
 .myform p
 {
@@ -144,6 +145,8 @@ a:visited
 	.container
 	{
 		width:100%;
+		padding-top: 2px;
+		padding-bottom: 50px;
 	}
 	.logo
 	{

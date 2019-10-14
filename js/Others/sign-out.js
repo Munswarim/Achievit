@@ -5,6 +5,7 @@ signOut.addEventListener('click', (event) => {
 		localStorage.setItem('EMAIL', '');
 		localStorage.setItem('USERNAME', '');
 		localStorage.setItem('USERID', '');
+		localStorage.setItem('USERTYPE', '');
 		window.location.href="../Guest/sign_in.html";
 	});
 })

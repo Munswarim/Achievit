@@ -1,9 +1,19 @@
 <!DOCTYPE=html>
 <head>
-	<title>My URLs</title><link rel="icon" href="../images/icon.png">
+	<title>Search result</title><link rel="icon" href="../images/icon.png">
     <meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" 
 	href = "../css/basics.css">
+	<style>
+		#title
+		{
+			width:50%;
+		}
+		#time
+		{
+			width:20%;
+		}
+	</style>
 </head>
 <body>	
 		<div class="background" style = "z-index: -2;">
@@ -19,13 +29,13 @@
 		
 		<div class="box-1">
 			<button class="button-1" onclick="window.location.href = 'index.html';">Home</button>
-			<button class="button-1" onclick="window.location.href = '#';" disabled title="Unavailable" style="cursor: not-allowed;">Courses</button>
-			<button class="button-1" onclick="window.location.href = 'url.html';">My URLs</button>
+			<button class="button-1" onclick="window.location.href = '#';" disabled title="Enables after signing in" style="cursor: not-allowed;">Courses</button>
+			<button class="button-1" onclick="window.location.href = '#';" disabled title="Enables after signing in" style="cursor: not-allowed;">My URLs</button>
 			<button class="button-1 FilePhile" onclick="window.location.href = 'https://ishraq10199.github.io/FilePhile/index.html';">FilePhile</button>
 			<div class="blockbreak"></div>
 			
-			<button class="button-1" onclick="window.location.href = 'Profile.html';">Profile</button>
-			<button class="button-1" id="sign-out">Sign out</button>
+			<button class="button-1" onclick="window.location.href = 'sign_in.html';">Sign in</button>
+			<button class="button-1" onclick="window.location.href = 'sign_up.html';">Sign up</button>
             <div class="searchbar">
 				<form id="searchForm">
 					<input type="text" id="search-by-keywords" name="Search" placeholder="What are you looking for?" onclick="placeholder='Search by using keywords';" title="Find by keywords">
@@ -44,15 +54,13 @@
 		
 		
 		<div class="container">
-			<table>
+			<table id="table">
 				<tr>
 					<th id="title" style="text-align: center;">Title</th>
-					<th id="edit"></th>
-					<th id="included-in-course">Included in course</th>
-					<th id="publicity">Publicity</th>
+					<th id="time">Date uploaded</th>
 					<th id="keywords">Keywords</th>
 				</tr>
-				<tr>
+				<!--tr>
 					<td id="title"><a href="#">Link-1</a></td>
 					<td id="edit"><button  onclick="window.location.href = 'edit_url.html';">Edit</button></td>
 					<td id="included-in-course">N/A</td>
@@ -85,12 +93,9 @@
 					<td id="included-in-course">N/A</td>
 					<td id="publicity">Private</td>
 					<td id="keywords">keywords1, keywords2, keywords3, keywords4, keywords5, keywords6, keywords7, keywords8</td>
-				</tr>
+				</tr-->
 			</table>
 
-			<div style="padding: 20px 20px" align="center">
-			<button class="button-1" onclick="window.location.href = 'new_url.html';" style="float: none; width: 100px;">Upload</button>
-			</div>
 		</div>
 
 		<div style="height:50px"><!--justAddingSomeSpace--></div>
@@ -99,10 +104,24 @@
 			think positively  |  network well  |  exercise daily  |  eat healthy  |  work hard  |  study smart  |  stay strong  |  build faith  |  cherish dreams  |  worry less  |  read more  |  be happy  |  volunteer freely  |  relax often  |  make plans  |  enjoy leisure  |  live comfortably  |  stop procrastinating  |  challenge yourself  |  don't ever quit
 
 		</div></footer>
-        <script src="../js/Others/background.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase.js"></script>
 		<script src="../js/Others/firebase-config.js"></script>
-		<script src="../js/Others/sign-out.js"></script>
-    <script src="../js/Others/search.js"></script>
+		<script src="../js/Others/search-result.js"></script>
+		<script src="../js/Others/auth.js"></script>
+		<!--script src="../js/Others/sign-out.js"></script-->
+		<script src="../js/Others/search.js"></script>
+		<script src="../js/Others/background.js"></script>
+		<script>
+			function signOut()
+			{
+				auth.signOut().then(() => {
+					localStorage.setItem('EMAIL', '');
+					localStorage.setItem('USERNAME', '');
+					localStorage.setItem('USERID', '');
+					localStorage.setItem('USERTYPE', '');
+					window.location.href="../Guest/sign_in.html";
+				});	
+			}
+		</script>>
 </body>
 </html>

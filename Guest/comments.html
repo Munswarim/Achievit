@@ -6,16 +6,19 @@
 	href = "../css/basics.css">
 </head>
 <body>	
+		<div class="background" style = "z-index: -2;">
+			<img src="../images/rain.png">
+		</div>
 		<div class="background">
-			<video autoplay loop muted>
-				<source src="../images/RainOnGlass1080p.mkv">
+			<video autoplay loop muted id="video">
+				<source src="../images/RainOnGlass1080p.mkv" type="video/mp4">
 			</video>
 		</div>
 		
-		<div class="box-2"></div>
+		<!--div class="box-2"></div-->
 		
 		<div class="box-1">
-			<button class="button-1" style="width: 90%;" disabled>
+			<button class="button-1" style="width: 90%; cursor: none;" disabled>
 			Messages / Comments from "Contact Us" section (designed for admin only)</button>
 			<button class="button-1" id="sign-out">Sign out</button>
 			

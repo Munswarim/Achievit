@@ -8,7 +8,8 @@ const init = function(e){
 	let container = document.querySelector('.container');
 	container.className='container myform';
 
-	var textarea=[]
+	var senderInfo=[]
+	var msg=[];
 	var div=[];
 	
 	if(comment_arr==null)
@@ -22,14 +23,24 @@ const init = function(e){
 
 	for(var i=0; i<comment_arr.length; i++)
 	{
-		textarea[i] = document.createElement('textarea');
-		textarea[i].id='comment';
-		textarea[i].value = email_arr[i] + ' < ' + date_arr[i] + ' >\n\n' + comment_arr[i];
-		textarea[i].disabled = true;
-		textarea[i].style.display = "block";
-		textarea[i].style.margin = "auto";
-		textarea[i].setAttribute('rows','10');
-		container.appendChild(textarea[i]);
+		senderInfo[i] = document.createElement('textarea');
+		msg[i]=document.createElement('textarea');
+		senderInfo[i].id='comment';
+		senderInfo[i].value = 'Sender : ' + email_arr[i] + '\nTime   : ' + date_arr[i]; 
+		senderInfo[i].disabled = true;
+		senderInfo[i].style.display = "block";
+		senderInfo[i].style.margin = "auto";
+		senderInfo[i].setAttribute('rows','2');
+		senderInfo[i].style.fontSize = "15";
+		msg[i].id='comment';
+		msg[i].value='\n' + comment_arr[i] + '\n';
+		msg[i].disabled = true;
+		msg[i].style.display = "block";
+		msg[i].style.margin = "auto";
+		msg[i].setAttribute('rows','10');
+		msg[i].style.fontSize = "15";
+		container.appendChild(senderInfo[i]);
+		container.appendChild(msg[i]);
 		div[i] = document.createElement('div');
 		div[i].style.height='50px';
 		container.appendChild(div[i]);

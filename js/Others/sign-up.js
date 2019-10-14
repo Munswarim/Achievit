@@ -51,7 +51,9 @@ signUp.addEventListener('submit', (e) => {
 			userID : userId
 		}).then(() => {
 			alert(username + ", welcome to Achievit. You will now be redirected to our sign-in page.");
-			window.location.href = "sign_in.html";
+			auth.signOut().then(() => {
+				window.location.href = "sign_in.html";
+			})
 		})
 	}).catch(err =>{
 		alert("This email address ( " + eMail +" ) is already in use by another account.");

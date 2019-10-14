@@ -6,13 +6,16 @@
 	href = "../css/basics.css">
 </head>
 <body>	
+		<div class="background" style = "z-index: -2;">
+			<img src="../images/rain.png">
+		</div>
 		<div class="background">
-			<video autoplay loop muted>
-				<source src="../images/RainOnGlass1080p.mkv">
+			<video autoplay loop muted id="video">
+				<source src="../images/RainOnGlass1080p.mkv" type="video/mp4">
 			</video>
 		</div>
 		
-		<div class="box-2"></div>
+		<!--div class="box-2"></div-->
 		
 		<div class="box-1">
 			<button class="button-1" onclick="window.location.href = 'index.html';">Home</button>
@@ -20,15 +23,21 @@
 			<button class="button-1" onclick="window.location.href = 'url.html';">My URLs</button>
 			<button class="button-1 FilePhile" onclick="window.location.href = 'https://ishraq10199.github.io/FilePhile/index.html';">FilePhile</button>
 			<div class="blockbreak"></div>
-			<div class="searchbar">
-				<form>
-					<input type="text" name="Search" placeholder="What are you looking for?" onclick="placeholder='Search by using keywords';" title="Find by keywords">
+			
+			<button class="button-1" onclick="window.location.href = 'Profile.html';">Profile</button>
+			<button class="button-1" id="sign-out">Sign out</button>
+            <div class="searchbar">
+				<form id="searchForm">
+					<input type="text" id="search-by-keywords" name="Search" placeholder="What are you looking for?" onclick="placeholder='Search by using keywords';" title="Find by keywords">
 					<input type="submit" value="Search" name="search">
 				</form>
 			</div>
-			<button class="button-1" onclick="window.location.href = 'Profile.html';">Profile</button>
-			<button class="button-1" id="sign-out">Sign out</button>
+			<div class="pause-play">
+				<button id="pause-play" >| |</button> <!--▶️-->
+			</div>
 		</div>			
+		<div class="clr"></div>
+		<div class="box-2"><div class="box-2 box-3"></div></div>
 		<div class="clr"></div>
 
 		<div style="height:50px"><!--justAddingSomeSpace--></div>
@@ -87,6 +96,7 @@
 			think positively  |  network well  |  exercise daily  |  eat healthy  |  work hard  |  study smart  |  stay strong  |  build faith  |  cherish dreams  |  worry less  |  read more  |  be happy  |  volunteer freely  |  relax often  |  make plans  |  enjoy leisure  |  live comfortably  |  stop procrastinating  |  challenge yourself  |  don't ever quit
 
 		</div></footer>
+        <script src="../js/Others/background.js"></script>
 		
 		<script>
 				function Check()
@@ -112,5 +122,6 @@
 		<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase.js"></script>
 		<script src="../js/Others/firebase-config.js"></script>
 		<script src="../js/Others/sign-out.js"></script>
+    <script src="../js/Others/search.js"></script>
 </body>
 </html>
