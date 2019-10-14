@@ -67,7 +67,7 @@ function setNavBar()
 		<div class="blockbreak"></div>
 		
 		<button class="button-1" onclick="window.location.href = 'Profile.html';">Profile</button>
-		<button class="button-1" id="sign-out">Sign out</button>
+		<button class="button-1" id="sign-out" onclick="signOut();">Sign out</button>
         <div class="searchbar">
 			<form id="searchForm">
 				<input type="text" id="search-by-keywords" name="Search" placeholder="What are you looking for?" onclick="placeholder='Search by using keywords';" title="Find by keywords">
@@ -89,7 +89,7 @@ function setNavBar()
 		<div class="blockbreak"></div>
 		
 		<button class="button-1" onclick="window.location.href = 'Profile.html';">Profile</button>
-		<button class="button-1" id="sign-out">Sign out</button>
+		<button class="button-1" id="sign-out" onclick="signOut();">Sign out</button>
         <div class="searchbar">
 			<form id="searchForm">
 				<input type="text" id="search-by-keywords" name="Search" placeholder="What are you looking for?" onclick="placeholder='Search by using keywords';" title="Find by keywords">
@@ -111,7 +111,7 @@ function setNavBar()
 		<div class="blockbreak"></div>
 		
 		<button class="button-1" onclick="window.location.href = 'Profile.html';">Profile</button>
-		<button class="button-1" id="sign-out">Sign out</button>
+		<button class="button-1" id="sign-out" onclick="signOut();">Sign out</button>
         <div class="searchbar">
 			<form id="searchForm">
 				<input type="text" id="search-by-keywords" name="Search" placeholder="What are you looking for?" onclick="placeholder='Search by using keywords';" title="Find by keywords">
