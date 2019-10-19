@@ -60,13 +60,13 @@ function setNavBar()
 	if(type=='Teacher')
 	{
 		menu.innerHTML=
-		`<button class="button-1" onclick="window.location.href = 'index.html';">Home</button>
-		<button class="button-1" onclick="window.location.href = 'courses.html';">Courses</button>
-		<button class="button-1" onclick="window.location.href = 'url.html';">My URLs</button>
+		`<button class="button-1" onclick="window.location.href = '../Teacher/index.html';">Home</button>
+		<button class="button-1" onclick="window.location.href = '../Teacher/courses.html';">Courses</button>
+		<button class="button-1" onclick="window.location.href = '../Teacher/url.html';">My URLs</button>
 		<button class="button-1 FilePhile" onclick="window.location.href = 'https://ishraq10199.github.io/FilePhile/index.html';">FilePhile</button>
 		<div class="blockbreak"></div>
 		
-		<button class="button-1" onclick="window.location.href = 'Profile.html';">Profile</button>
+		<button class="button-1" onclick="window.location.href = '../Teacher/Profile.html';">Profile</button>
 		<button class="button-1" id="sign-out" onclick="signOut();">Sign out</button>
         <div class="searchbar">
 			<form id="searchForm">
@@ -82,13 +82,13 @@ function setNavBar()
 	else if(type=='Student')
 	{
 		menu.innerHTML=
-		`<button class="button-1" onclick="window.location.href = 'index.html';">Home</button>
-		<button class="button-1" onclick="window.location.href = 'courses.html';">Courses</button>
-		<button class="button-1" onclick="window.location.href = 'url.html';">My URLs</button>
+		`<button class="button-1" onclick="window.location.href = '../Student/index.html';">Home</button>
+		<button class="button-1" onclick="window.location.href = '../Student/courses.html';">Courses</button>
+		<button class="button-1" onclick="window.location.href = '../Student/url.html';">My URLs</button>
 		<button class="button-1 FilePhile" onclick="window.location.href = 'https://ishraq10199.github.io/FilePhile/index.html';">FilePhile</button>
 		<div class="blockbreak"></div>
 		
-		<button class="button-1" onclick="window.location.href = 'Profile.html';">Profile</button>
+		<button class="button-1" onclick="window.location.href = '../Student/Profile.html';">Profile</button>
 		<button class="button-1" id="sign-out" onclick="signOut();">Sign out</button>
         <div class="searchbar">
 			<form id="searchForm">
@@ -104,13 +104,13 @@ function setNavBar()
 	else if(type=='Other')
 	{
 		menu.innerHTML=
-		`<button class="button-1" onclick="window.location.href = 'index.html';">Home</button>
+		`<button class="button-1" onclick="window.location.href = '../Others/index.html';">Home</button>
 		<button class="button-1" onclick="window.location.href = '#';" disabled title="Unavailable" style="cursor: not-allowed;">Courses</button>
-		<button class="button-1" onclick="window.location.href = 'url.html';">My URLs</button>
+		<button class="button-1" onclick="window.location.href = '../Others/url.html';">My URLs</button>
 		<button class="button-1 FilePhile" onclick="window.location.href = 'https://ishraq10199.github.io/FilePhile/index.html';">FilePhile</button>
 		<div class="blockbreak"></div>
 		
-		<button class="button-1" onclick="window.location.href = 'Profile.html';">Profile</button>
+		<button class="button-1" onclick="window.location.href = '../Others/Profile.html';">Profile</button>
 		<button class="button-1" id="sign-out" onclick="signOut();">Sign out</button>
         <div class="searchbar">
 			<form id="searchForm">
